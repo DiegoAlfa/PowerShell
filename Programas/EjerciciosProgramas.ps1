@@ -9,7 +9,7 @@
 (Get-WmiObject -Class Win32_Product) | Select-Object name,version
 
 #Agrupa los programas cuyo nombre sea "Microsoft Office Proof (Spanish) 2007"
-(Get-WmiObject -Class Win32_Product) | Select-String "MySQL" | Group-Object
+(Get-WmiObject -Class Win32_Product) | Select-String "Microsoft Office Proof (Spanish) 2007" | Group-Object
 
 #Dime si está instalado Gimp
 if(((Get-WmiObject -Class Win32_Product).name) | Select-String "Gimp"){"Instalado"}
